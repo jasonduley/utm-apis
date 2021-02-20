@@ -599,7 +599,7 @@ paths:
               4. On the first announcement of an Operation, submit_time SHOULD be equal to update_time.
               5. submit_time MUST be less than or equal to update_time.
               5. {gufi} path parameter MUST equal Operation.gufi of the body data
-              6. Operation.uss_id == access_token.sub
+              6. Operation.uss_name == access_token.sub
               7. Operation.priority_elements.status MUST NOT be PUBLIC_SAFETY.
               8. Other rules for a USS Operation PUT are satisfied.
 
