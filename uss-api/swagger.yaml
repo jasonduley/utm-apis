@@ -436,7 +436,7 @@ paths:
           in: query
           description: >-
             Field name(s) to use for sorting records. If multiple fields
-            are provided, the sorting is based on the ordered priorty of that
+            are provided, the sorting is based on the ordered priority of that
             list.  Note that the enum provided designates the required fields
             that a USS must support. A USS may decide to support additional
             fields, but how that USS communicates that option is out of scope
@@ -452,7 +452,7 @@ paths:
           collectionFormat: csv
           maxItems: 3
           minItems: 1
-          default: submit_time
+          default: ["submit_time"]
         - name: sort_increasing
           in: query
           description: >-
