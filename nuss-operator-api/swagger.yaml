@@ -621,7 +621,7 @@ paths:
         404:
           description: "Not Found"
 
-  /user/<username>/utmMsg/v1:
+  /user/{username}/utmMsg/v1:
     get:
       tags:
       - "Subscription Points"
@@ -630,7 +630,12 @@ paths:
         \ operations. For example, after an operator POSTs an operation to the /operations\
         \  endpoint, that operator will receive InformMessage ACCEPTED or REJECTED.\
         \  The connection URL is wss://{host}/uss/NotificationProvider/utm\n"
-      parameters: []
+      parameters:
+      - name: "username"
+        in: "path"
+        description: "Operator username."
+        required: true
+        type: string
       responses:
         410:
           description: "WRONG_PROTOCOL - A RESTful call was made to this endpoint\
